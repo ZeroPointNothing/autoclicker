@@ -138,7 +138,7 @@ def update_config(value: str, data):
 
 if not os.path.exists("./config.json"):
     with open("config.json", "w") as f:
-        json.dump({"speed": 1, "hotkey": "ctrl+o"}, f)
+        json.dump({"speed": 1, "hotkey": "ctrl+/"}, f)
 
 if args.speed:
     if not float(args.speed) >= 0:
