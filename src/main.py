@@ -197,7 +197,7 @@ elif args.gui:
             ctypes.windll.kernel32.CloseHandle(hwnd)
 
     window = tk.Tk()
-    window.title("Bestest Autoclicker GUI")
+    window.title("Zero's Autoclicker GUI")
     window.geometry("350x200")
     window.minsize(200, 200)
 
