@@ -30,6 +30,9 @@ The speed command (`-s`, `--speed`) can be used to adjust the wait between each 
 ```
 # Change the speed to 0.2.
 autoclicker -s 0.2
+
+# Run as fast as possible (can cause programs to lock up!)
+autoclicker -s 0
 ```
 
 ### Hotkey Command
