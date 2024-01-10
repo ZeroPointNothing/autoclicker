@@ -101,11 +101,15 @@ class Clicker:
         
         self.running = True
 
-        # Start the autoclicker.
-        clicker = threading.Thread(name="clicker_loop", target=self.__clicker_loop)
-        clicker.daemon = True
-        clicker.start()
-        print("Started autoclicker.")
+        # More threads, more clicking.
+        threads = int(os.environ.get("zclicker_threads", 1))
+
+        for i in range(threads):
+            # Start the autoclicker.
+            clicker = threading.Thread(name=f"clicker_loop_{i}", target=self.__clicker_loop)
+            clicker.daemon = True
+            clicker.start()
+        print(f"Started autoclicker ({threads}).")
 
     def __stop_autoclicker(self):
         if self.statustext is not None:
